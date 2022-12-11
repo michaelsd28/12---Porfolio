@@ -1,0 +1,33 @@
+
+
+  .textPresentation{
+
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    height: 4px;
+    background-color: #808080;
+    border-radius: 4px;
+
+
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #222222;
+ 
+  }
+  
+  ::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+  }
