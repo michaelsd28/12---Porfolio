@@ -1,33 +1,119 @@
+.textPresentation {
+  font-family: sans-serif;
+  text-align: center;
+
+}
+body{
+  overflow-x: hidden;
+}
 
 
-  .textPresentation{
 
-    font-family: sans-serif;
-    text-align: center;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 4px;
+  background-color: #808080;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222222;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+/* skills */
+
+.skillCard img {
+  animation: floating 6s ease-in-out infinite;
+  width: clamp(40px,10vw,60px);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+
   }
-
-
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    background-color: #f5f5f5;
-
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    height: 4px;
-    background-color: #808080;
-    border-radius: 4px;
-
-
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #222222;
+  50% {
+    transform: translateY(-5px);
  
+
   }
-  
-  ::-webkit-scrollbar-button {
-    height: 0;
-    width: 0;
+  100% {
+    transform: translateY(0);
+
   }
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.gradient-container {
+	background: linear-gradient(-45deg, #1f4e80,  #1b6b88, #0e263f) !important;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+z-index: 10 !important;
+opacity: 2 !important;
+
+}
+
+img{
+
+  pointer-events: none;
+}
+
+
+
+.skillCard {
+  /* default style for card */
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition:  0.2s ease-in-out;
+}
+
+.skillCard:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  scale: 1.05;
+  transition:  0.2s ease-in-out;
+}
+
+.skillCardContent {
+  /* default style for card */
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+background-color: #111827;
+
+  transition:  0.2s ease-in-out;
+}
+
+.skillCardContent:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+
+  background-color: #36e7f7;
+  color: black;
+  transition:  0.2s ease-in-out;
+
+}

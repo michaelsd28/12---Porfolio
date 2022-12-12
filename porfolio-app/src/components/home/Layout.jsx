@@ -12,6 +12,7 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
+import Footer from '../footer/Footer'
 
 const pages = ['home', 'about', 'contact']
 const settings = ['C#', 'JAVA', 'DART', 'KOTLIN']
@@ -37,7 +38,7 @@ const Layout = () => {
 
   return (
     <>
-      <AppBar style={{ background: '#2E3B55' }} position="static">
+      <AppBar style={{ background: '#13415b' }} position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -175,6 +176,7 @@ const Layout = () => {
       </AppBar>
 
       <Outlet />
+      <Footer/>
     </>
   )
 }
