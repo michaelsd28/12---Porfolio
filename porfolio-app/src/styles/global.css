@@ -1,13 +1,10 @@
-
-
 /* #region  home style*/
 .textPresentation {
   font-family: sans-serif;
   text-align: center;
-
 }
-/* #endregion */
 
+/* #endregion */
 
 /* #region scroll styles*/
 ::-webkit-scrollbar {
@@ -31,117 +28,139 @@
   width: 0;
 }
 
-
-
 /* #endregion */
 
 /* #region skill content*/
 
-
-
-.skillCard img {
-  animation: floating 6s ease-in-out infinite;
-  width: clamp(40px,10vw,60px);
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-
-  }
-  50% {
-    transform: translateY(-5px);
- 
-
-  }
-  100% {
-    transform: translateY(0);
-
-  }
-}
-
-
-
-@keyframes gradientAnim {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.skill-card img {
+  width: clamp(40px, 10vw, 60px);
 }
 
 .gradient-container {
-	background: linear-gradient(-45deg, #1f4e80,  #1b6b88, #0e263f) !important;
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #1f4e80, #1b6b88, #0e263f) !important;
+  background-size: 400% 400%;
 
-z-index: 10 !important;
-opacity: 2 !important;
-
+  z-index: 10 !important;
+  opacity: 2 !important;
 }
 
-img{
-
+img {
   pointer-events: none;
 }
 
-
-
-.skillCard {
+.skill-card {
   /* default style for card */
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  transition:  0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.skillCard:hover {
+.skill-card:hover {
   /* raise the card on hover */
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
   scale: 1.05;
-  transition:  0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.skillCardContent {
+.skill-card-content{
+
+
   /* default style for card */
   color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
-background-color: #111827;
+  background-color: #111827;
 
-  transition:  0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.skillCardContent:hover {
+.skill-card-content:hover {
   /* raise the card on hover */
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
 
   background-color: #36e7f7;
   color: black;
-  transition:  0.2s ease-in-out;
-
+  transition: 0.2s ease-in-out;
 }
-/* #endregion */
 
+/* #endregion */
 
 /* #region languages component*/
-.bg-gradient-language {
-	background: linear-gradient(-45deg, #1f4e80,  #1b6b88, #0e263f) !important;
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-
-z-index: 10 !important;
-opacity: 2 !important;
-
+.bg-gradient-languages {
+  background: linear-gradient(-45deg, #391f80, #1b6b88, #150e3f);
+  background-size: 400% 400%;
 }
 
+.languages-card {
+  /* default style for card */
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease-in-out;
+}
+
+.languages-card:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  scale: 1.05;
+  transition: 0.2s ease-in-out;
+}
+
+.languages-card-content {
+  /* default style for card */
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+  background-color: #111827;
+
+  transition: 0.2s ease-in-out;
+}
+
+.languages-card-content:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+
+  background-color: #2a33b3;
+  transition: 0.2s ease-in-out;
+}
 /* #endregion */
 
 
+/* #region framework */
+.bg-gradient-frameworks {
+  background: linear-gradient(to right, #5c0f0f, #b9281d, #3f0e0e);
+  background-size: 280% 280%;
+}
 
+.frameworks-card {
+  /* default style for card */
 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease-in-out;
+}
 
+.frameworks-card:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  scale: 1.05;
+  transition: 0.2s ease-in-out;
+}
 
+.frameworks-card-content {
+  /* default style for card */
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+  background-color: #111827;
+
+  transition: 0.2s ease-in-out;
+}
+
+.frameworks-card-content:hover {
+  /* raise the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+
+  background-color: #b32a2a;
+  transition: 0.2s ease-in-out;
+}
+
+/* #endregion framework */

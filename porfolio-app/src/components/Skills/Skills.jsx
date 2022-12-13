@@ -10,7 +10,7 @@ import SkillCard from './cards/SkillCard'
 function Skills() {
   return (
     <>
-      <div>
+
 
         <Box
           className="gradient-container"
@@ -38,14 +38,30 @@ function Skills() {
               <h1 style={{ margin: 20, fontFamily: 'Roboto' }}>My skills</h1>
             </Grid>
      
-            <SkillCard />
-            <SkillCard />
-            <SkillCard />
+            <SkillCard
+            className={'skill'}
+            imgSRC={
+              process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'
+            }
+          />
+          <SkillCard
+            className={'skill'}
+            imgSRC={
+              process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'
+            }
+          />
+          <SkillCard
+            className={'skill'}
+            imgSRC={
+              process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'
+            }
+          />
+
     
           </Grid>
         </Box>
 
-      </div>
+ 
     </>
   )
 }
