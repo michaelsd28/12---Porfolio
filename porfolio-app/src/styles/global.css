@@ -164,3 +164,17 @@ img {
 }
 
 /* #endregion framework */
+
+
+
+.circle-gradient {
+  --size: 450px;
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(rgba(55, 235, 169, 0.85), #5b37eb);
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  opacity: 0.4;
+  position: absolute;
+
+}
