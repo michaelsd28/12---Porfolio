@@ -1,14 +1,15 @@
+
+
+/* #region  home style*/
 .textPresentation {
   font-family: sans-serif;
   text-align: center;
 
 }
-body{
-  overflow-x: hidden;
-}
+/* #endregion */
 
 
-
+/* #region scroll styles*/
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -30,7 +31,13 @@ body{
   width: 0;
 }
 
-/* skills */
+
+
+/* #endregion */
+
+/* #region skill content*/
+
+
 
 .skillCard img {
   animation: floating 6s ease-in-out infinite;
@@ -55,7 +62,7 @@ body{
 
 
 
-@keyframes gradient {
+@keyframes gradientAnim {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -117,3 +124,24 @@ background-color: #111827;
   transition:  0.2s ease-in-out;
 
 }
+/* #endregion */
+
+
+/* #region languages component*/
+.bg-gradient-language {
+	background: linear-gradient(-45deg, #1f4e80,  #1b6b88, #0e263f) !important;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+z-index: 10 !important;
+opacity: 2 !important;
+
+}
+
+/* #endregion */
+
+
+
+
+
+

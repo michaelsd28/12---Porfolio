@@ -84,6 +84,7 @@ const Landing = () => {
 
   return (
     <>
+ 
       <Grid
         container
         direction="row"
@@ -171,6 +172,7 @@ const Landing = () => {
           </p>
         </Grid>
       </Grid>
+
     </>
   )
 }

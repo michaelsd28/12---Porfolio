@@ -1,4 +1,6 @@
 import React from 'react'
+import Frameworks from '../Skills/Frameworks'
+import Languajes from '../Skills/Languajes'
 import Skills from '../Skills/Skills'
 import Landing from './Landing'
 
@@ -8,6 +10,8 @@ function HomeContainer() {
     
     <Landing/>
     <Skills/>
+    <Languajes/>
+    <Frameworks/>
     </>
   )
 }
