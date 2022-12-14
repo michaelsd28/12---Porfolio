@@ -20,23 +20,27 @@ function Languages() {
         }}
       >
         <Grid style={{ zIndex: 10 }} container spacing={{ xs: 4, md: 4 }}>
+          
           <Grid lg={12} md={12} sm={12} xs={12}>
             <h1 style={{ margin: 20, fontFamily: 'Roboto' }}>Languages</h1>
           </Grid>
 
           <SkillCard
             className={'languages'}
+            CardTitle={'Javascript'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/javascriptIcon.png'
             }
           />
           <SkillCard
+            CardTitle={'Javascript'}
             className={'languages'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/javascriptIcon.png'
             }
           />
           <SkillCard
+            CardTitle={'Javascript'}
             className={'languages'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/javascriptIcon.png'

@@ -32,20 +32,23 @@ function Frameworks() {
        <h1 style={{ margin: 20, fontFamily: 'Roboto' }}>Frameworks</h1>
      </Grid>
 
-<SkillCard
+     <SkillCard
             className={'frameworks'}
+            CardTitle={"Jetpack Compose"}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/rocketIcon.png'
             }
           />
           <SkillCard
             className={'frameworks'}
+            CardTitle={"Jetpack Compose"}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/rocketIcon.png'
             }
           />
           <SkillCard
             className={'frameworks'}
+            CardTitle={"Jetpack Compose"}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/rocketIcon.png'
             }

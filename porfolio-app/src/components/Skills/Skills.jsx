@@ -31,7 +31,7 @@ function Skills() {
             style={{ zIndex: 10 }}
             container
             spacing={{ xs: 4, md: 4 }}
-            columns={{ xs: 1, sm: 3, md: 12 }}
+
           >
             <Grid lg={12} md={12} sm={12} xs={12}>
        
@@ -39,18 +39,21 @@ function Skills() {
             </Grid>
      
             <SkillCard
+            CardTitle={'Android'}
             className={'skill'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'
             }
           />
           <SkillCard
+            CardTitle={'Android'}
             className={'skill'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'
             }
           />
           <SkillCard
+            CardTitle={'Android'}
             className={'skill'}
             imgSRC={
               process.env.PUBLIC_URL + '/assets/home/skills/androidIcon1.png'

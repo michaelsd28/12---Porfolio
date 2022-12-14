@@ -9,7 +9,13 @@ import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 
 const theme = createTheme({
+    typography:{
+        allVariants:{
+            color:"white"
+        }
+    },
   palette: {
+  
     background: {
       paper: "#1b1f25", // your color
     },

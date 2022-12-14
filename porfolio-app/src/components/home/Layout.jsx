@@ -38,7 +38,7 @@ const Layout = () => {
 
   return (
     <>
-      <AppBar style={{ background: '#13415b' }} position="static">
+      <AppBar style={{ background: 'linear-gradient(135deg, #344280 0%, #3d2555 100%)' }} position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -74,6 +74,9 @@ const Layout = () => {
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">
+
+        
+
                       <Link
                         style={{ textDecoration: 'none', color: 'inherit' }}
                         to={page}

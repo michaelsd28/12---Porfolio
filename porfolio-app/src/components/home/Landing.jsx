@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from "react";
-import Lottie from "lottie-react";
+import React, { useRef, useEffect } from 'react'
+import Lottie from 'lottie-react'
 // import lottie from 'lottie-web';
-import Grid from "@mui/material/Grid";
-import Typical from "react-typical";
+import Grid from '@mui/material/Grid'
+import Typical from 'react-typical'
 
-import developerSkills from "./developerSkills.json";
-import { Box } from "@mui/system";
+import developerSkills from './developerSkills.json'
+import { Box } from '@mui/system'
 // import developerSkills from "../../../public/assets/animation/developerSkills.json"
 
 /*   <img
@@ -20,34 +20,34 @@ const defaultOptions = {
   autoplay: true,
   animationData: developerSkills,
   rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
+    preserveAspectRatio: 'xMidYMid slice',
   },
-};
+}
 
 const Landing = () => {
   // const lottieRef = useRef(null);
 
   useEffect(() => {
     // Get a reference to the image element
-    var image = document.querySelector(".my-image");
-    var image2 = document.querySelector(".my-image2");
+    var image = document.querySelector('.my-image')
+    var image2 = document.querySelector('.my-image2')
 
     // Add an event listener for the 'scroll' event
-    window.addEventListener("scroll", function () {
+    window.addEventListener('scroll', function () {
       // Get the number of pixels the user has scrolled
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
-      scrollTop = scrollTop / 2;
+      scrollTop = scrollTop / 2
 
       // Update the image's position
-      image.style.left = scrollTop + "px";
-      image2.style.right = scrollTop + "px";
+      image.style.left = scrollTop + 'px'
+      image2.style.right = scrollTop + 'px'
 
-      console.log("scroll:: " + scrollTop);
-    });
+      console.log('scroll:: ' + scrollTop)
+    })
 
-    return () => {};
-  }, []);
+    return () => {}
+  }, [])
 
   // useEffect(() => {
 
@@ -103,7 +103,7 @@ const Landing = () => {
           {/* <div style={{width:"clamp(100px, 80vw,  800px)"}} ref={developerSkills} /> */}
           <div
             className="d-flex justify-content-center"
-            style={{ textAlign: "center", zIndex: 9 }}
+            style={{ textAlign: 'center', zIndex: 9 }}
           >
             {/* <img
               style={{
@@ -122,22 +122,20 @@ const Landing = () => {
             <div
               style={{
                 zIndex: -1,
-                left:0
-    
+                left: 0,
               }}
               className="circle-gradient my-image"
             />
             <Lottie
               style={{
-                // width: 'clamp(150px, 80vw,  700px)',
-                width: "auto",
+                width: 'auto',
                 zIndex: 9,
               }}
               animationData={developerSkills}
             />
           </div>
         </Grid>
-        <Grid style={{}} item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           {/* <img
             style={{
               opacity: 0.2,
@@ -153,11 +151,7 @@ const Landing = () => {
           <div
             style={{
               zIndex: -1,
-              right:0
-    
-       
-
-      
+              right: 0,
             }}
             className="circle-gradient my-image2"
           />
@@ -166,11 +160,11 @@ const Landing = () => {
             <Typical
               className="textPresentation"
               steps={[
-                "Welcome",
+                'Welcome',
                 1500,
-                "Hi! my name is Michael Santana",
+                'Hi! my name is Michael Santana',
                 2000,
-                "I am a developer",
+                'I am a developer',
                 3000,
               ]}
               loop={Infinity}
@@ -180,8 +174,8 @@ const Landing = () => {
           <p
             style={{
               fontSize: 18,
-              textAlign: "left",
-              margin: "clamp(10px, 80vw,  30px)",
+              textAlign: 'left',
+              margin: 'clamp(10px, 80vw,  30px)',
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -193,7 +187,7 @@ const Landing = () => {
         </Grid>
       </Grid>
     </>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

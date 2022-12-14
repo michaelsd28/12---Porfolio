@@ -168,6 +168,7 @@ img {
 
 
 .circle-gradient {
+  background: linear-gradient(135deg, #344280 0%, #3d2555 100%);
   --size: 450px;
   width: var(--size);
   height: var(--size);
@@ -176,5 +177,26 @@ img {
   border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
   opacity: 0.4;
   position: absolute;
+color:linear-gradient(to top, #09203f 0%, #23333f 100%);
+}
+
+/* #region Define the animation keyframes */
+@keyframes circle-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle-animation{
+
+    /* Add animation properties */
+    animation: circle-animation 12s linear infinite;
 
 }
+
+/* #endregion*/
+
+
+
