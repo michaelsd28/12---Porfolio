@@ -9,27 +9,15 @@ function About() {
 
   return (
     <>
-      <Box display="flex" alignItems="center" alignSelf="center">
+      <Box className="about-responsive" display="flex" alignItems="center" alignSelf="center">
         <Grid container>
-          {/* <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <h1>About</h1>
-          </Grid> */}
-
-          <Grid
-            item
-            // style={{ border: '6px solid #5988ab' }}
-            xs={12}
-            sm={12}
-            md={2}
-            lg={2}
-            xl={2}
-          />
+          <Grid  tem xs={12} sm={12} md={2} lg={2} xl={2} />
+          
           <div
             style={{ position: 'absolute' }}
             className="circle-gradient circle-animation"
           />
           <Grid
-            // style={{ border: '6px solid yellow' }}
             item
             direction="column"
             display="flex"
@@ -46,8 +34,9 @@ function About() {
                 width: 'clamp(400px,40vw,800px)',
                 padding: 0,
                 margin: 0,
-                // border: '5px solid red',
+     
               }}
+              loop={false}
               animationData={profileAnim}
             />
           </Grid>

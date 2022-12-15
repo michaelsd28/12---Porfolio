@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
-import Lottie from 'lottie-react'
+import React, { useRef, useEffect } from "react";
+import Lottie from "lottie-react";
 // import lottie from 'lottie-web';
-import Grid from '@mui/material/Grid'
-import Typical from 'react-typical'
+import Grid from "@mui/material/Grid";
+import Typical from "react-typical";
 
-import developerSkills from './developerSkills.json'
-import { Box } from '@mui/system'
+import developerSkills from "./mobileAnim.json";
+import { Box } from "@mui/system";
 // import developerSkills from "../../../public/assets/animation/developerSkills.json"
 
 /*   <img
@@ -20,34 +20,34 @@ const defaultOptions = {
   autoplay: true,
   animationData: developerSkills,
   rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
+    preserveAspectRatio: "xMidYMid slice",
   },
-}
+};
 
 const Landing = () => {
   // const lottieRef = useRef(null);
 
   useEffect(() => {
     // Get a reference to the image element
-    var image = document.querySelector('.my-image')
-    var image2 = document.querySelector('.my-image2')
+    var image = document.querySelector(".my-image");
+    var image2 = document.querySelector(".my-image2");
 
     // Add an event listener for the 'scroll' event
-    window.addEventListener('scroll', function () {
+    window.addEventListener("scroll", function () {
       // Get the number of pixels the user has scrolled
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      scrollTop = scrollTop / 2
+      scrollTop = scrollTop / 2;
 
       // Update the image's position
-      image.style.left = scrollTop + 'px'
-      image2.style.right = scrollTop + 'px'
+      image.style.left = scrollTop + "px";
+      image2.style.right = scrollTop + "px";
 
-      console.log('scroll:: ' + scrollTop)
-    })
+      console.log("scroll:: " + scrollTop);
+    });
 
-    return () => {}
-  }, [])
+    return () => {};
+  }, []);
 
   // useEffect(() => {
 
@@ -85,10 +85,13 @@ const Landing = () => {
   return (
     <>
       <Grid
+      className="landing-responsive"
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
+
+        style={{border:"solid red 5px"}}
       >
         <Grid
           direction="row"
@@ -103,7 +106,7 @@ const Landing = () => {
           {/* <div style={{width:"clamp(100px, 80vw,  800px)"}} ref={developerSkills} /> */}
           <div
             className="d-flex justify-content-center"
-            style={{ textAlign: 'center', zIndex: 9 }}
+            style={{ textAlign: "center", zIndex: 9 }}
           >
             {/* <img
               style={{
@@ -128,9 +131,10 @@ const Landing = () => {
             />
             <Lottie
               style={{
-                width: 'auto',
+                width: "auto",
                 zIndex: 9,
               }}
+              loop={false}
               animationData={developerSkills}
             />
           </div>
@@ -160,11 +164,11 @@ const Landing = () => {
             <Typical
               className="textPresentation"
               steps={[
-                'Welcome',
+                "Welcome",
                 1500,
-                'Hi! my name is Michael Santana',
+                "Hi! my name is Michael Santana",
                 2000,
-                'I am a developer',
+                "I am a developer",
                 3000,
               ]}
               loop={Infinity}
@@ -174,8 +178,8 @@ const Landing = () => {
           <p
             style={{
               fontSize: 18,
-              textAlign: 'left',
-              margin: 'clamp(10px, 80vw,  30px)',
+              textAlign: "left",
+              margin: "clamp(10px, 80vw,  30px)",
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -187,7 +191,7 @@ const Landing = () => {
         </Grid>
       </Grid>
     </>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

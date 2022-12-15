@@ -6,8 +6,9 @@ import contactImg from './contact.jpg'
 function Contact() {
   return (
     <>
-      <Box>
+      <Box className='contact-responsive'>
         <div class="circle-gradient"></div>
+        <div style={{margin:"6vh"}}/>
         <Grid style={{ padding: 30 }} container>
         <Grid
             style={{padding:10}}
@@ -152,6 +153,7 @@ function Contact() {
             lg={2}
             xl={2}
           ></Grid>
+                     <div style={{margin:"6vh"}}/>
         </Grid>
       </Box>
     </>

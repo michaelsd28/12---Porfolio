@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 /* #region  home style*/
 .textPresentation {
   font-family: sans-serif;
@@ -7,7 +11,7 @@
 /* #endregion */
 
 /* #region scroll styles*/
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
   background-color: #f5f5f5;
@@ -26,7 +30,7 @@
 ::-webkit-scrollbar-button {
   height: 0;
   width: 0;
-}
+} */
 
 /* #endregion */
 
@@ -62,9 +66,7 @@ img {
   transition: 0.2s ease-in-out;
 }
 
-.skill-card-content{
-
-
+.skill-card-content {
   /* default style for card */
   color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -86,6 +88,7 @@ img {
 /* #endregion */
 
 /* #region languages component*/
+
 .bg-gradient-languages {
   background: linear-gradient(-45deg, #391f80, #1b6b88, #150e3f);
   background-size: 400% 400%;
@@ -122,8 +125,8 @@ img {
   background-color: #2a33b3;
   transition: 0.2s ease-in-out;
 }
-/* #endregion */
 
+/* #endregion */
 
 /* #region framework */
 .bg-gradient-frameworks {
@@ -165,8 +168,6 @@ img {
 
 /* #endregion framework */
 
-
-
 .circle-gradient {
   background: linear-gradient(135deg, #344280 0%, #3d2555 100%);
   --size: 450px;
@@ -177,26 +178,72 @@ img {
   border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
   opacity: 0.4;
   position: absolute;
-color:linear-gradient(to top, #09203f 0%, #23333f 100%);
+  color: linear-gradient(to top, #09203f 0%, #23333f 100%);
 }
 
-/* #region Define the animation keyframes */
+/* #region circle animation keyframes */
 @keyframes circle-animation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.circle-animation{
 
-    /* Add animation properties */
-    animation: circle-animation 12s linear infinite;
-
+.circle-animation {
+  /* Add animation properties */
+  animation: circle-animation 12s linear infinite;
 }
 
 /* #endregion*/
 
+/*#region contact-css*/
 
 
+
+@media only screen and (min-height: 990px) {
+  .contact-responsive {
+    height: 83.2vh;
+  }
+}
+
+/*#endregion*/
+
+
+
+/*#region contact-css*/
+
+
+
+@media only screen and (min-height: 990px) {
+  .about-responsive {
+    height: 83.2vh;
+  }
+}
+
+/*#endregion*/
+
+
+
+/*#region landing-css*/
+.landing-responsive{
+
+  height: 70vh;
+
+
+}
+
+@media only screen and (min-heght: 900px) {
+
+  .landing-responsive{
+
+
+
+  }
+  
+  
+}
+
+/*#endregion*/

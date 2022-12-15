@@ -1,25 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/home/Layout'
+import Contact from './components/contact/Contact'
+import About from './components/about/About'
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/home/Layout";
-import Contact from "./components/contact/Contact";
-import About from "./components/about/About"
-
-import HomeContainer from "./components/home/HomeContainer";
-
+import HomeContainer from './components/home/HomeContainer'
+import Footer from './components/footer/Footer'
 
 export default function App() {
   return (
-
     <BrowserRouter>
+      <Layout />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="home" element={<HomeContainer />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<HomeContainer />} />
-        </Route>
+        <Route path="home" element={<HomeContainer />} />
+        <Route path="/" element={<HomeContainer />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
-
-  );
+  )
 }
