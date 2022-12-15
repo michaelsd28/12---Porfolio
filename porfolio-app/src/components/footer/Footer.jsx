@@ -1,56 +1,71 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import "./style.css"
-import sendIMG from "./sendImage.png"
+import './style.css'
+import sendIMG from './sendImage.png'
+import { Link } from 'react-router-dom'
+
+let pages = ['home', 'about', 'contact']
 
 function Footer() {
   return (
-
-
-
-<footer >
-    <div className="container py-4">
+    <footer>
+      <div className="container py-4">
         <div className="row gy-4 gx-5">
-            <div className="col-lg-4 col-md-6">
-                <h5 className="h1 text-white">FB.</h5>
-                <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                <p className="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a className="text-primary" href="#">Bootstrapious.com</a></p>
-            </div>
-            <div className="col-lg-2 col-md-6">
-                <h5 className="text-white mb-3">Quick links</h5>
-                <ul className="list-unstyled text-muted">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Get started</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <div className="col-lg-2 col-md-6">
-                <h5 className="text-white mb-3">Quick links</h5>
-                <ul className="list-unstyled text-muted">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Get started</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <div className="col-lg-4 col-md-6">
-                <h5 className="text-white mb-3">Newsletter</h5>
-                <p className="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                <form action="#">
-                    <div className="input-group mb-3">
-                        <input className="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-                        <button className="btn btn-primary" id="button-addon2" type="button">
-<img  style={{width:"clamp(10px,20vw,25px)"}} src={sendIMG} alt="send"/>
+          <div className="col-lg-4 col-md-6">
+            <h5 className="h3 text-white">Porafolio web</h5>
+            <p className="small text-muted">
+            Este sitio web lo utiliza como una presentacion web para mostrar mis habilidades y destresas en software.
+   
+            </p>
+            <p className="small text-muted mb-0">
+              &copy; Copyrights. All rights reserved.{' '}
+  
+            </p>
+          </div>
+          <div className="col-lg-2 col-md-6">
+            <h5 className="text-white mb-3">Links rapidos</h5>
+            <ul className="list-unstyled text-muted">
+              {pages.map((page, index) => (
+                <li onClick={() => window.scrollTo(0, 0)}>
+                  <Link to={page} key={index}>
+                    {page}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                        </button>
-                    </div>
-                </form>
-            </div>
+          <div className="col-lg-4 col-md-6">
+            <h5 className="text-white mb-3">Subscribete</h5>
+            <p className="small text-muted">
+              Subscribete para que te pueda mandar actualizaciones de mis
+              projectos y que servicios puedo ofrecer como desarrollador.
+            </p>
+            <form action="#">
+              <div className="input-group mb-3">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Correo electronico"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  className="btn btn-primary"
+                  id="button-addon2"
+                  type="button"
+                >
+                  <img
+                    style={{ width: 'clamp(10px,20vw,25px)' }}
+                    src={sendIMG}
+                    alt="send"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
-</footer>
-
+      </div>
+    </footer>
   )
 }
 

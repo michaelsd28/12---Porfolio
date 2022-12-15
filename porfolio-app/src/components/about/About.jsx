@@ -43,7 +43,7 @@ function About() {
 
           <Grid
             item
-            style={{ margin: 30, marginBottom: 80 }}
+            style={{ margin: "clamp(20px,80vw,35px)", marginBottom: 80 }}
             direction="column"
             display="flex"
             alignItems="center"
