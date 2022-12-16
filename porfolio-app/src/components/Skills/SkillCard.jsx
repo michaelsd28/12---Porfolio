@@ -11,7 +11,7 @@ function SkillCard({ className, imgSRC, CardTitle,paragraph }) {
   return (
     <Grid  item xs={12} sm={12} md={4} lg={4} xl={4} key={1}>
       <Card className={className + '-card'}>
-        <CardContent style={{minHeight:340,maxHeight:340}}  className={className + '-card-content'}>
+        <CardContent  style={{ display:"flex",flexDirection:"column",alignContent:"center",justifyContent:"center", minHeight:340,maxHeight:340}}  className={className + '-card-content'}>
           <Typography gutterBottom variant="h5" component="div">
             <img
               style={{ margin: 10, width: 50 }}

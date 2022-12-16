@@ -207,7 +207,16 @@ const Landing = () => {
               web y sistemas de integración. Mantengo mis habilidades
               actualizadas para ofrecer trabajo de buena calidad.
             </p>
+
           </Grid>
+          <div
+              style={{
+                zIndex: -1,
+                right: 0,
+              }}
+              className="circle-gradient my-image2"
+            />
+          
         </Grid>
         <Grid
           direction="row"
