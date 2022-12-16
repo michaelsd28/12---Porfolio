@@ -7,14 +7,14 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
-function SkillCard({ className, imgSRC, CardTitle }) {
+function SkillCard({ className, imgSRC, CardTitle,paragraph }) {
   return (
-    <Grid item xs={12} sm={12} md={4} lg={4} xl={4} key={1}>
+    <Grid  item xs={12} sm={12} md={4} lg={4} xl={4} key={1}>
       <Card className={className + '-card'}>
-        <CardContent className={className + '-card-content'}>
+        <CardContent style={{minHeight:340,maxHeight:340}}  className={className + '-card-content'}>
           <Typography gutterBottom variant="h5" component="div">
             <img
-              style={{ margin: 10, width: 60 }}
+              style={{ margin: 10, width: 50 }}
               className="img-fluid"
               src={imgSRC}
               alt="logo"
@@ -24,10 +24,8 @@ function SkillCard({ className, imgSRC, CardTitle }) {
       
    
           <Typography variant="body1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            {paragraph}
+
           </Typography>
         </CardContent>
         <CardActions>

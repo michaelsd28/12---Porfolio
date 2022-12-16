@@ -55,20 +55,17 @@ function About() {
             xl={4}
           >
             {' '}
-            <h1 style={{ fontSize: 'clamp(15px,10vw,45px)' }}>About</h1>
+            <h1 style={{ fontSize: 'clamp(15px,10vw,45px)' }}>Sobre mi</h1>
             <p style={{ fontSize: 20 }}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatibus saepe illo odit sed totam dolor voluptate eos, nemo
-              iste, architecto, nam ullam rem minima quia consequatur unde
-              itaque atque veritatis!
+            Como estudiante de ingeniería de software con un año restante en la universidad, he desarrollado sólidas habilidades de programación que me permiten crear aplicaciones y soluciones de software. Pasé los últimos años aprendiendo una variedad de lenguajes y técnicas de programación, y obtuve una base sólida en los principios de la informática. Confío en mi capacidad para crear soluciones de software eficientes y efectivas para una variedad de necesidades.
+
+
             </p>
             <p style={{ fontSize: 20 }}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatibus saepe illo odit sed totam dolor voluptate eos, nemo
-              iste, architecto, nam ullam rem minima quia consequatur unde
-              itaque atque veritatis!
+            Además de mis habilidades de programación, también soy un gran solucionador de problemas y un pensador crítico. He aprendido a abordar los problemas con una mentalidad lógica y analítica, lo que me ayuda a identificar y abordar rápidamente cualquier problema que pueda surgir durante el proceso de desarrollo. Constantemente busco nuevos desafíos y oportunidades para aprender y crecer como ingeniero de software, y estoy emocionado de ver lo que me depara el futuro.
             </p>
           </Grid>
+          <div style={{padding:40}}/>
           <Grid
             item
             // style={{ border: '6px solid #c55f25' }}

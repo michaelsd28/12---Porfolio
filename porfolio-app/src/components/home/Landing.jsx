@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
-import Lottie from 'lottie-react'
+import React, { useRef, useEffect } from "react";
+import Lottie from "lottie-react";
 // import lottie from 'lottie-web';
-import Grid from '@mui/material/Grid'
-import Typical from 'react-typical'
+import Grid from "@mui/material/Grid";
+import Typical from "react-typical";
 
-import developerSkills from './mobileAnim.json'
-import { Box } from '@mui/system'
+import developerSkills from "./mobileAnim.json";
+import { Box } from "@mui/system";
 // import developerSkills from "../../../public/assets/animation/developerSkills.json"
 
 /*   <img
@@ -20,34 +20,32 @@ const defaultOptions = {
   autoplay: true,
   animationData: developerSkills,
   rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
+    preserveAspectRatio: "xMidYMid slice",
   },
-}
+};
 
 const Landing = () => {
   // const lottieRef = useRef(null);
 
   useEffect(() => {
     // Get a reference to the image element
-    var image = document.querySelector('.my-image')
-    var image2 = document.querySelector('.my-image2')
+    var image = document.querySelector(".my-image");
+    var image2 = document.querySelector(".my-image2");
 
     // Add an event listener for the 'scroll' event
-    window.addEventListener('scroll', function () {
+    window.addEventListener("scroll", function () {
       // Get the number of pixels the user has scrolled
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      scrollTop = scrollTop / 2
+      scrollTop = scrollTop / 2;
 
       // Update the image's position
-      image.style.left = scrollTop + 'px'
-      image2.style.right = scrollTop + 'px'
+      image.style.left = scrollTop + "px";
+      image2.style.right = scrollTop + "px";
+    });
 
-      console.log('scroll:: ' + scrollTop)
-    })
-
-    return () => {}
-  }, [])
+    return () => {};
+  }, []);
 
   // useEffect(() => {
 
@@ -90,7 +88,6 @@ const Landing = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-
       >
         <Grid
           direction="row"
@@ -102,8 +99,8 @@ const Landing = () => {
           md={2}
           lg={2}
           xl={2}
-          style={{ padding:0}}
-      />
+          style={{ padding: 0 }}
+        />
 
         <Grid
           direction="row"
@@ -118,7 +115,7 @@ const Landing = () => {
           {/* <div style={{width:"clamp(100px, 80vw,  800px)"}} ref={developerSkills} /> */}
           <div
             className="d-flex justify-content-center"
-            style={{ textAlign: 'center', zIndex: 9 }}
+            style={{ textAlign: "center", zIndex: 9 }}
           >
             {/* <img
               style={{
@@ -136,7 +133,6 @@ const Landing = () => {
 
             <div
               style={{
-
                 zIndex: -1,
                 left: 0,
               }}
@@ -144,8 +140,8 @@ const Landing = () => {
             />
             <Lottie
               style={{
-                width: 'auto',
-                minWidth:450,
+                width: "auto",
+                minWidth: 450,
                 zIndex: 9,
               }}
               loop={false}
@@ -153,7 +149,15 @@ const Landing = () => {
             />
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid
+        
+          container
+          xs={12}
+          sm={12}
+          md={4}
+          lg={4}
+          xl={4}
+        >
           {/* <img
             style={{
               opacity: 0.2,
@@ -166,46 +170,44 @@ const Landing = () => {
             src={`${process.env.PUBLIC_URL}/assets/home/nebulous.png`}
             alt="logo"
           /> */}
-          <div
-            style={{
-              zIndex: -1,
-              right: 0,
-            }}
-            className="circle-gradient my-image2"
-          />
 
-          <div style={{ zIndex: 10 }}>
+          <Grid         item xs={12} sm={12} md={12} lg={12} xl={12}>
+
             <Typical
               className="textPresentation"
               steps={[
-                'Welcome',
+                "Welcome",
                 1500,
-                'Hi! my name is Michael Santana',
+                "Hi! my name is Michael Santana",
                 2000,
-                'I am a developer',
+                "I am a developer",
                 3000,
               ]}
               loop={Infinity}
-              wrapper="h1"
+              wrapper="h2"
             />
-          </div>
-          <p
-            style={{
-              position:"relative",
-              fontSize: 18,
-              textAlign: 'left',
-              margin: 'clamp(10px, 80vw,  30px)',
-              
-             bottom:"clamp(10px,30vw,30px)"
-              
-            }}
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries.
-          </p>
+          </Grid>
+          <Grid        item xs={12} sm={12} md={12} lg={12} xl={12}>
+            {" "}
+            <p
+
+              style={{
+     
+                fontSize: 20,
+                textAlign: "left",
+                 margin: 'clamp(10px, 80vw,  30px)',
+
+            
+              }}
+            >
+              Hola, soy un desarrollador de software con buenos conocimientos en
+              javascript/nodejs, react, mongodb, c# wpf, uwp, kotlin, ktor y
+              más. Me apasiona crear soluciones de software de alta calidad y
+              estoy dispuesto a ayudar con aplicaciones personalizadas, sitios
+              web y sistemas de integración. Mantengo mis habilidades
+              actualizadas para ofrecer trabajo de buena calidad.
+            </p>
+          </Grid>
         </Grid>
         <Grid
           direction="row"
@@ -217,11 +219,10 @@ const Landing = () => {
           md={2}
           lg={2}
           xl={2}
-
         />
       </Grid>
     </>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;
