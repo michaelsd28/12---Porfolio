@@ -41,6 +41,7 @@ const Layout = () => {
       <AppBar
         style={{
           background: "linear-gradient(135deg, #344280 0%, #3d2555 100%)",
+          minWidth:"100vw"
         }}
         position="static"
       >

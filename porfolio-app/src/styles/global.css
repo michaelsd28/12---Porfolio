@@ -201,7 +201,11 @@ img {
 
 /*#region contact-css*/
 
+.contact-responsive {
 
+
+  min-width: 100vw;
+}
 
 @media only screen and (min-height: 990px) {
   .contact-responsive {
@@ -214,11 +218,16 @@ img {
 
 
 /*#region about-css*/
+.about-responsive {
 
+
+  min-width: 100vw;
+}
 
 @media only screen and (min-width: 750px) {
   .about-responsive {
     height: 83.5vh;
+
 
   }
 }
@@ -235,9 +244,15 @@ img {
 
 
 /*#region landing-css*/
+
+.css-wfe5u0-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+
+
+}
 .landing-responsive {
 
   height: 85vh;
+  min-width: 100vw;
 
 
 }

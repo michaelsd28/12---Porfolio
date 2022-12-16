@@ -102,7 +102,7 @@ const Landing = () => {
           md={2}
           lg={2}
           xl={2}
-          style={{ padding:10}}
+          style={{ padding:0}}
       />
 
         <Grid
@@ -191,9 +191,13 @@ const Landing = () => {
           </div>
           <p
             style={{
+              position:"relative",
               fontSize: 18,
               textAlign: 'left',
               margin: 'clamp(10px, 80vw,  30px)',
+              
+             bottom:"clamp(10px,30vw,30px)"
+              
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -213,7 +217,7 @@ const Landing = () => {
           md={2}
           lg={2}
           xl={2}
-          style={{ padding:10}}
+
         />
       </Grid>
     </>
