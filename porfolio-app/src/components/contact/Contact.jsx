@@ -1,21 +1,41 @@
-import { Box, Button, Grid, TextField } from "@mui/material";
-
-import React from "react";
-import contactImg from "./contact.jpg";
-
-
-function handleSubmit(event){
-
-  event.preventDefault();
-  event.currentTarget.reset();
-}
+import { Box, Button, Grid, TextField } from '@mui/material'
+import React from 'react'
+import contactIMG from "./contact.jpg"
 
 function Contact() {
+  var [mailData, setMailData] = React.useState({
+    email: '',
+    name: '',
+    lastName: '',
+    subject: '',
+    message: '',
+  })
+
+  const updateMailJson = (event) => {
+    const { name, value } = event.target
+    setMailData({
+      ...mailData,
+      [name]: value,
+    })
+  }
+
+  function handleSubmit(event) {
+    window.location.href = `mailto:michael11281@hotmail.com?cc=${mailData.email}&subject=${mailData.subject}&body=${mailData.message}%0D%0A %0D%0ACordialmente: %0D%0A${mailData.lastName + ', ' + mailData.name}`;
+
+
+    event.preventDefault()
+    event.currentTarget.reset()
+  }
+
+  function handleClear(event) {
+    event.currentTarget.form.reset() // reset the form
+  }
+
   return (
     <>
       <Box className="contact-responsive">
         <div class="circle-gradient"></div>
-        <div style={{ margin: "6vh" }} />
+        <div style={{ margin: '6vh' }} />
         <Grid style={{ padding: 30 }} container>
           <Grid
             style={{ padding: 10 }}
@@ -45,7 +65,7 @@ function Contact() {
             style={{
               borderRadius: 15,
               backgroundImage:
-                "linear-gradient(to top, #09203f 0%, #23333f 100%)",
+                'linear-gradient(to top, #09203f 0%, #23333f 100%)',
             }}
             xs={12}
             sm={12}
@@ -63,11 +83,12 @@ function Contact() {
               xl={6}
               style={{
                 backgroundImage:
-                  "url(static/media/contact.c670bf00e67ed028c838.jpg)",
+                  `url(${contactIMG})`,
+      
 
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: "10px 0 0 10px",
+                backgroundSize: 'cover',
+                backgroundPosition: 'right',
+                borderRadius: '10px 0 0 10px',
               }}
             >
               {/* <img src={contactImg} alt="contact img" /> */}
@@ -89,55 +110,73 @@ function Contact() {
                 flexDirection="column"
               >
                 <form
-                  style={{ display: "flex", flexDirection: "column" }}
+                  style={{ display: 'flex', flexDirection: 'column' }}
                   onSubmit={handleSubmit}
                 >
                   <TextField
-                    sx={{ input: { color: "white" } }}
-                    id="standard-basic"
-                    label="Name"
+        
+                    name="name"
+                    type="text" 
+                    onChange={updateMailJson}
+                    sx={{ input: { color: 'white' } }}
+                    id="fname standard-basic"
+                    label="Nombre"
+                    variant="standard"
+                  />
+
+                  <TextField
+                    name="lastName"
+                    onChange={updateMailJson}
+                    sx={{ input: { color: 'white' } }}
+                    id="lname standard-basic"
+                    label="Apellido"
                     variant="standard"
                   />
                   <TextField
-                    sx={{ input: { color: "white" } }}
+                   
+                    name="email"
+                    onChange={updateMailJson}
+                    sx={{ input: { color: 'white' } }}
                     id="standard-basic"
-                    label="Last name"
+                    label="CC Email "
                     variant="standard"
+      
+                    
                   />
                   <TextField
-                    sx={{ input: { color: "white" } }}
+                    name="subject"
+                    onChange={updateMailJson}
+                    sx={{ input: { color: 'white' } }}
                     id="standard-basic"
-                    label="Email"
+                    label="Tema"
                     variant="standard"
-                  />
-                  <TextField
-                    sx={{ input: { color: "white" } }}
-                    id="standard-basic"
-                    label="Subject"
-                    variant="standard"
-                    style={{ margin: 5, borderRadius: 5, color: "white" }}
+                    style={{ margin: 5, borderRadius: 5, color: 'white' }}
                   />
 
                   <textarea
+                    name="message"
+                    onChange={updateMailJson}
                     placeholder="Mensaje"
                     rows="3"
                     style={{
                       margin: 5,
-                      background: "#353a45",
+                      background: '#353a45',
                       borderRadius: 10,
-                      color: "white",
+                      color: 'white',
                     }}
                     variant="filled"
-                    sx={{ input: { color: "white" } }}
+                    sx={{ input: { color: 'white' } }}
                   />
                   <Box display="flex" flexDirection="row">
                     <Button
                       style={{ margin: 5 }}
                       variant="contained"
                       color="secondary"
+                      onClick={(event) => event.currentTarget.form.reset()}
                     >
                       Limpiar
                     </Button>
+
                     <Button
                       style={{ margin: 5 }}
                       variant="contained"
@@ -161,11 +200,11 @@ function Contact() {
             lg={2}
             xl={2}
           ></Grid>
-          <div style={{ margin: "6vh" }} />
+          <div style={{ margin: '6vh' }} />
         </Grid>
       </Box>
     </>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

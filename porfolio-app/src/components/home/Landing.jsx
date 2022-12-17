@@ -176,11 +176,11 @@ const Landing = () => {
             <Typical
               className="textPresentation"
               steps={[
-                "Welcome",
+                "Bienvenido",
                 1500,
-                "Hi! my name is Michael Santana",
+                "Hola! mi nombre es Michael",
                 2000,
-                "I am a developer",
+                "Soy desarollador",
                 3000,
               ]}
               loop={Infinity}

@@ -179,6 +179,7 @@ img {
   opacity: 0.4;
   position: absolute;
   color: linear-gradient(to top, #09203f 0%, #23333f 100%);
+  z-index: -1;
 }
 
 /* #region circle animation keyframes */

@@ -7,6 +7,20 @@ import { Link } from 'react-router-dom'
 let pages = ['home', 'about', 'contact']
 
 function Footer() {
+
+
+  var [email,setEmail] = React.useState("");
+
+  function handleSubmit(event) {
+    window.location.href = `mailto:michael11281@hotmail.com?cc=${email}&subject=Subscripcion`;
+
+
+    event.preventDefault()
+    event.currentTarget.reset()
+  }
+
+
+
   return (
     <footer>
       <div className="container py-4">
@@ -41,18 +55,20 @@ function Footer() {
               Subscribete para que te pueda mandar actualizaciones de mis
               projectos y que servicios puedo ofrecer como desarrollador.
             </p>
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit}>
               <div className="input-group mb-3">
                 <input
                   className="form-control"
                   type="text"
                   placeholder="Correo electronico"
                   aria-describedby="button-addon2"
+                  onChange={(e)=> setEmail(e.target.value)}
                 />
                 <button
                   className="btn btn-primary"
                   id="button-addon2"
-                  type="button"
+                  type="submit"
+
                 >
                   <img
                     style={{ width: 'clamp(10px,20vw,25px)' }}

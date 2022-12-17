@@ -29,7 +29,7 @@ function SkillCard({ className, imgSRC, CardTitle,paragraph }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Ver mas</Button>
+     
         </CardActions>
       </Card>
     </Grid>

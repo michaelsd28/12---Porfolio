@@ -14,8 +14,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Footer from "../footer/Footer";
 
-const pages = ["home", "about", "contact"];
-const settings = ["C#", "JAVA", "DART", "KOTLIN"];
+const pages = ["inicio", "acerca", "contacto"];
+const settings = ["Github ","Twitter", "Linkedin"];
+const socialLinks = ["https://github.com/michaelsd28","https://twitter.com/home","https://www.linkedin.com/in/michael-santana-47bb87219/"]
 
 const Layout = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -32,7 +33,8 @@ const Layout = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = (link) => {
+    window.location.href =link
     setAnchorElUser(null);
   };
 
@@ -41,7 +43,8 @@ const Layout = () => {
       <AppBar
         style={{
           background: "linear-gradient(135deg, #344280 0%, #3d2555 100%)",
-          minWidth:"100vw"
+          minWidth:"100vw",
+          zIndex:10
         }}
         position="static"
       >
@@ -108,7 +111,7 @@ const Layout = () => {
             >
               <Link
                 style={{ textDecoration: "none", color: "inherit" }}
-                to="home"
+                to="inicio"
               >
                 <img
                   style={{
@@ -122,7 +125,7 @@ const Layout = () => {
                   src={`${process.env.PUBLIC_URL}/assets/home/codingIcon.png`}
                   alt="logo"
                 />
-                My porfolio
+                Mi portafolio
               </Link>
             </Typography>
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>

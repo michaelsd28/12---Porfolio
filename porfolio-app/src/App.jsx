@@ -12,10 +12,10 @@ export default function App() {
     <BrowserRouter>
       <Layout />
       <Routes>
-        <Route path="home" element={<HomeContainer />} />
+        <Route path="inicio" element={<HomeContainer />} />
         <Route path="/" element={<HomeContainer />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="acerca" element={<About />} />
+        <Route path="contacto" element={<Contact />} />
         <Route path='*' element={<Page404 />} /> 
       </Routes>
       <Footer />
