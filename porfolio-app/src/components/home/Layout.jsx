@@ -1,58 +1,61 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Outlet, Link } from "react-router-dom";
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import Footer from "../footer/Footer";
+import { Outlet, Link } from 'react-router-dom'
+import * as React from 'react'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/material/Menu'
+import MenuIcon from '@mui/icons-material/Menu'
+import Container from '@mui/material/Container'
+import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
+import MenuItem from '@mui/material/MenuItem'
+import Footer from '../footer/Footer'
 
-const pages = ["inicio", "acerca", "contacto"];
-const settings = ["Github ","Twitter", "Linkedin"];
-const socialLinks = ["https://github.com/michaelsd28","https://twitter.com/home","https://www.linkedin.com/in/michael-santana-47bb87219/"]
+const pages = ['inicio', 'acerca', 'contacto']
+const settings = ['Github ', 'Twitter', 'Linkedin']
+const socialLinks = [
+  'https://github.com/michaelsd28',
+  'https://twitter.com/home',
+  'https://www.linkedin.com/in/michael-santana-47bb87219/',
+]
 
 const Layout = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const [anchorElUser, setAnchorElUser] = React.useState(null)
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+    setAnchorElNav(event.currentTarget)
+  }
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+    setAnchorElUser(event.currentTarget)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+    setAnchorElNav(null)
+  }
 
-  const handleCloseUserMenu = (link) => {
-    window.location.href =link
-    setAnchorElUser(null);
-  };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null)
+  }
 
   return (
     <>
       <AppBar
         style={{
-          background: "linear-gradient(135deg, #344280 0%, #3d2555 100%)",
-          minWidth:"100vw",
-          zIndex:10
+          background: 'linear-gradient(135deg, #344280 0%, #3d2555 100%)',
+          minWidth: '100vw',
+          zIndex: 10,
         }}
         position="static"
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
-                style={{ position: "relative", left: -20 }}
+                style={{ position: 'relative', left: -20 }}
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -66,23 +69,23 @@ const Layout = () => {
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "right",
+                  vertical: 'bottom',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+                  vertical: 'top',
+                  horizontal: 'right',
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: "block", md: "none" },
+                  display: { xs: 'block', md: 'none' },
                 }}
               >
                 {pages.map((page) => (
                   <Link
-                    style={{ textDecoration: "none", color: "inherit" }}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
                     to={page}
                   >
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -100,24 +103,24 @@ const Layout = () => {
               href=""
               sx={{
                 mr: 2,
-                display: { xs: "flex", md: "flex" },
+                display: { xs: 'flex', md: 'flex' },
                 flexGrow: 1,
-                fontFamily: "sans-serif",
+                fontFamily: 'sans-serif',
                 fontWeight: 700,
-                letterSpacing: ".1rem",
-                color: "inherit",
-                textDecoration: "none",
+                letterSpacing: '.1rem',
+                color: 'inherit',
+                textDecoration: 'none',
               }}
             >
               <Link
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{ textDecoration: 'none', color: 'inherit' }}
                 to="inicio"
               >
                 <img
                   style={{
                     width: 35,
-                    margin: "0 10px 0 0",
-                    background: "#a2a8fb",
+                    margin: '0 10px 0 0',
+                    background: '#a2a8fb',
                     borderRadius: 3,
                     padding: 5,
                   }}
@@ -128,16 +131,16 @@ const Layout = () => {
                 Mi portafolio
               </Link>
             </Typography>
-            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Link
-                  style={{ textDecoration: "none", color: "inherit" }}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                   to={page}
                 >
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     {page}
                   </Button>
@@ -148,7 +151,7 @@ const Layout = () => {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Lenguajes">
                 <IconButton
-                  style={{ position: "relative", margin: "0 0 0 15px" }}
+                  style={{ position: 'relative', margin: '0 0 0 15px' }}
                   onClick={handleOpenUserMenu}
                   sx={{ p: 0 }}
                 >
@@ -161,23 +164,29 @@ const Layout = () => {
                 </IconButton>
               </Tooltip>
               <Menu
-                sx={{ mt: "45px" }}
+                sx={{ mt: '45px' }}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
                 anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+                  vertical: 'top',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+                  vertical: 'top',
+                  horizontal: 'right',
                 }}
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                {settings.map((setting, index) => (
+                  <MenuItem
+                    key={index}
+                    onClick={() => {
+                      window.open(socialLinks[index], '_blank')
+                      handleCloseUserMenu()
+                    }}
+                  >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
@@ -187,7 +196,7 @@ const Layout = () => {
         </Container>
       </AppBar>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
