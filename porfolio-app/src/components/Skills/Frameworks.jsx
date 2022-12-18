@@ -33,11 +33,13 @@ function Frameworks() {
               process.env.PUBLIC_URL + '/assets/home/skills/rocketIcon.png'
             }
             paragraph={
+    
               <ul>
                 <li>Jetpack compose</li>
                 <li>Flutter</li>
                 <li>Uno platform</li>
               </ul>
+    
             }
           />
           <SkillCard

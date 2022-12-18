@@ -3,16 +3,29 @@ import * as React from 'react'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
+import { Button } from '@mui/material'
 
-function SkillCard({ className, imgSRC, CardTitle,paragraph }) {
+function SkillCard({ className, imgSRC, CardTitle, paragraph }) {
   return (
-    <Grid  item xs={12} sm={12} md={4} lg={4} xl={4} key={1}>
-      <Card className={className + '-card'}>
-        <CardContent  style={{ display:"flex",flexDirection:"column",alignContent:"center",justifyContent:"center", minHeight:340,maxHeight:340}}  className={className + '-card-content'}>
-          <Typography gutterBottom variant="h5" component="div">
+    <Grid item xs={12} sm={12} md={4} lg={4} xl={4} >
+      <Card style={{ height: '100%',borderRadius:15
+
+      
+      }} className={className + '-card'}>
+        <CardContent
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignContent: 'center',
+            justifyContent: 'start',
+            height:"100%",
+       
+          }}
+          className={className + '-card-content'}
+        >
+          <h5 style={{fontSize:"clamp(20px,10vw,26px)"}} >
             <img
               style={{ margin: 10, width: 50 }}
               className="img-fluid"
@@ -20,17 +33,11 @@ function SkillCard({ className, imgSRC, CardTitle,paragraph }) {
               alt="logo"
             />{' '}
             {CardTitle}
-          </Typography>
-      
-   
-          <Typography variant="body1">
-            {paragraph}
+          </h5>
 
-          </Typography>
+          <p  style={{fontSize:"clamp(16px,4vw,20px)"}}>{paragraph}</p>
         </CardContent>
-        <CardActions>
-     
-        </CardActions>
+        <CardActions></CardActions>
       </Card>
     </Grid>
   )
