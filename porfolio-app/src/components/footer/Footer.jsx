@@ -1,25 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import './style.css'
-import sendIMG from './sendImage.png'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./style.css";
+import sendIMG from "./sendImage.png";
+import { Link } from "react-router-dom";
 
-let pages = ['home', 'about', 'contact']
+let pages = ["home", "about", "contact"];
 
 function Footer() {
-
-
-  var [email,setEmail] = React.useState("");
+  var [email, setEmail] = React.useState("");
 
   function handleSubmit(event) {
     window.location.href = `mailto:michael11281@hotmail.com?cc=${email}&subject=Subscripcion`;
 
-
-    event.preventDefault()
-    event.currentTarget.reset()
+    event.preventDefault();
+    event.currentTarget.reset();
   }
-
-
 
   return (
     <footer>
@@ -28,12 +23,11 @@ function Footer() {
           <div className="col-lg-4 col-md-6">
             <h5 className="h3 text-white">Porafolio web</h5>
             <p className="small text-muted">
-            Este sitio web lo utiliza como una presentacion web para mostrar mis habilidades y destresas en software.
-   
+              Este sitio web lo utiliza como una presentacion web para mostrar
+              mis habilidades y destresas en software.
             </p>
             <p className="small text-muted mb-0">
-              &copy; Copyrights. All rights reserved.{' '}
-  
+              &copy; Copyrights. All rights reserved.{" "}
             </p>
           </div>
           <div className="col-lg-2 col-md-6">
@@ -41,7 +35,11 @@ function Footer() {
             <ul className="list-unstyled text-muted">
               {pages.map((page, index) => (
                 <li onClick={() => window.scrollTo(0, 0)}>
-                  <Link to={page} key={index}>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    to={page}
+                    key={index}
+                  >
                     {page}
                   </Link>
                 </li>
@@ -62,16 +60,15 @@ function Footer() {
                   type="text"
                   placeholder="Correo electronico"
                   aria-describedby="button-addon2"
-                  onChange={(e)=> setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <button
                   className="btn btn-primary"
                   id="button-addon2"
                   type="submit"
-
                 >
                   <img
-                    style={{ width: 'clamp(10px,20vw,25px)' }}
+                    style={{ width: "clamp(10px,20vw,25px)" }}
                     src={sendIMG}
                     alt="send"
                   />
@@ -82,7 +79,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
