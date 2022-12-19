@@ -27,7 +27,7 @@ function About() {
             alignSelf="center"
             xs={12}
             sm={12}
-            md={6}
+            md={12}
             lg={4}
             xl={4}
           >
