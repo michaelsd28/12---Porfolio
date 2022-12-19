@@ -10,7 +10,7 @@ function About() {
 
   return (
     <>
-      <Box style={{zIndex:5}} className="about-responsive" display="flex" alignItems="center" alignSelf="center">
+      <Box style={{zIndex:5,height:"100%"}} className="about-responsive" display="flex" alignItems="center" alignSelf="center">
         <Grid container   >
           <Grid   tem xs={12} sm={12} md={2} lg={2} xl={2} />
           
