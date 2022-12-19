@@ -184,7 +184,7 @@ const Landing = () => {
                 3000,
               ]}
               loop={Infinity}
-              wrapper="h2"
+              wrapper="h1"
             />
           </Grid>
           <Grid        item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -193,14 +193,14 @@ const Landing = () => {
 
               style={{
      
-                fontSize: 20,
+                fontSize: 22,
                 textAlign: "left",
                  margin: 'clamp(10px, 80vw,  30px)',
 
             
               }}
             >
-              Hola, soy un desarrollador de software con buenos conocimientos en
+              Hola, soy un desarrollador de software con amplios conocimientos en
               javascript/nodejs, react, mongodb, c# wpf, uwp, kotlin, ktor y
               más. Me apasiona crear soluciones de software de alta calidad y
               estoy dispuesto a ayudar con aplicaciones personalizadas, sitios
