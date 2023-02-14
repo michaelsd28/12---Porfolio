@@ -4,7 +4,7 @@ import "./style.css";
 import sendIMG from "./sendImage.png";
 import { Link } from "react-router-dom";
 
-let pages = ["home", "about", "contact"];
+let pages = ["inicio", "acerca", "contacto"];
 
 function Footer() {
   var [email, setEmail] = React.useState("");
