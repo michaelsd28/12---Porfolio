@@ -1,7 +1,10 @@
 package com.example.kchatfx
 
 import com.example.kchatfx.models.Message
+import com.example.kchatfx.services.GlobalStore
 import com.example.kchatfx.services.SocketObserver
+import io.ktor.websocket.*
+import javafx.application.Platform
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
 import javafx.scene.control.Button
@@ -9,6 +12,9 @@ import javafx.scene.control.Label
 import javafx.scene.control.ScrollPane
 import javafx.scene.control.TextField
 import javafx.scene.layout.FlowPane
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.net.URL
 import java.util.*
 
@@ -33,11 +39,22 @@ class ChatController : Initializable {
     private var sendButton: Button = Button()
 
 
-    fun sendMessage() {
+     fun sendMessage() {
 
-        var message = getMessageLabel(inputTextField.text, false)
-        messageHistoryFlowPane.children.add(message)
-        inputTextField.text = ""
+        runBlocking {
+
+            var session:DefaultWebSocketSession = GlobalStore.session!!
+            println("🤔 $session ")
+
+            var message = getMessageLabel(inputTextField.text, false)
+            messageHistoryFlowPane.children.add(message)
+            session.send(inputTextField.text)
+            inputTextField.text = ""
+        }
+
+
+
+
 
 
     }
@@ -72,22 +89,32 @@ class ChatController : Initializable {
 
         }
 
+            GlobalScope.launch {
+                SocketObserver.subscribe { message ->
+
+                    messages.add(message)
+
+                    println("☕🍵 ??  ${message.message}")
+
+                    Platform.runLater(Runnable {
+
+                        messageHistoryFlowPane.children.add(getMessageLabel(message.message, false))
+
+                    })
+
+
+                }
+            }
 
 
 
-
-
-        SocketObserver.subscribe { message ->
-
-            messages.add(message)
-
-        }
     }
+
 
     private fun getMessageLabel(message: String, isFriend: Boolean): Label {
 
-        var labelStyle = if (isFriend) "-fx-background-color: linear-gradient(to right, #9890e3, #b1f4cf);" else "-fx-background-color: " +
-                "linear-gradient(to left, #2af598, #009efd);"
+        var labelStyle =
+            if (isFriend) "-fx-background-color: linear-gradient(to right, #9890e3, #b1f4cf);" else "-fx-background-color: " + "linear-gradient(to left, #2af598, #009efd);"
 
         var label = Label(message)
 

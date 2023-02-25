@@ -1,5 +1,6 @@
 package com.example.kchatfx
 
+import com.example.kchatfx.services.GlobalStore
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.websocket.*
@@ -14,7 +15,7 @@ import java.util.*
 
 class HelloApplication : Application() {
     override fun start(stage: Stage) {
-        startWebSocket()
+//        startWebSocket()
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
         val scene = Scene(fxmlLoader.load(), 620.0, 420.0)
         // min width and height
@@ -44,16 +45,33 @@ fun startWebSocket() {
             println("Connected to server")
 
 
-            while (true) {
-                var session: DefaultWebSocketSession = this
-                val othersMessage = session.incoming.receive() as? Frame.Text
-                println(othersMessage?.readText())
-                val myMessage = Scanner(System.`in`).next()
-                if (myMessage != null) {
+            GlobalStore.session = this
 
-                    session.send(myMessage)
-                }
-            }
+
+
+//            while (true) {
+//                println("🤔Waiting for message...")
+//                var text = incoming.receive() as? Frame.Text
+//
+//
+//                println("Received: ${text?.readText()}")
+//
+//                if (GlobalStore.session == null) {
+//                    GlobalStore.session = this
+//                }
+//
+//
+//
+//
+//
+//
+////                val myMessage = Scanner(System.`in`).next()
+////                if (myMessage != null) {
+////
+////                    session?.send(myMessage)
+////
+////                }
+//            }
         }
     }
     client.close()

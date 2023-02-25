@@ -25,6 +25,10 @@ class Message {
     var time: String = ""
     var type: MessageType = MessageType.TEXT
 
+    override fun toString(): String {
+        return "Message(id=$id, message='$message', sender='$sender', receiver='$receiver', time='$time', type=$type)"
+    }
+
 
 
 }
