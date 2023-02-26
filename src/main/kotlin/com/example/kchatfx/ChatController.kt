@@ -1,6 +1,7 @@
 package com.example.kchatfx
 
 import com.example.kchatfx.models.Message
+import com.example.kchatfx.models.MessageType
 import com.example.kchatfx.services.GlobalStore
 import com.example.kchatfx.services.SocketObserver
 import io.ktor.websocket.*
@@ -39,22 +40,32 @@ class ChatController : Initializable {
     private var sendButton: Button = Button()
 
 
-     fun sendMessage() {
+    fun sendMessage() {
 
         runBlocking {
 
-            var session:DefaultWebSocketSession = GlobalStore.session!!
-            println("🤔 $session ")
+            var session: DefaultWebSocketSession = GlobalStore.session!!
+            println("🤔session::  $session ")
 
             var message = getMessageLabel(inputTextField.text, false)
             messageHistoryFlowPane.children.add(message)
-            session.send(inputTextField.text)
+
+            val messageObject = Message(
+
+                message = inputTextField.text,
+                type = "text",
+                sender = "6",
+                receiver = "4",
+                timestamp = "2023-02-26T14:30:28.939Z"
+            )
+
+            val json = Message.toJson(messageObject)
+
+
+            session.send(json)
+
             inputTextField.text = ""
         }
-
-
-
-
 
 
     }
@@ -76,8 +87,8 @@ class ChatController : Initializable {
         messageHistoryFlowPane.prefWrapLength = 200.0
         messageHistoryFlowPane.prefWidth = 595.0
         messageHistoryFlowPane.prefHeight = 200.0
-        messageHistoryFlowPane.hgap = 10.0
-        messageHistoryFlowPane.vgap = 10.0
+        messageHistoryFlowPane.hgap = 5.0
+        messageHistoryFlowPane.vgap = 5.0
 
 
         // 0 to 100 loop
@@ -89,23 +100,22 @@ class ChatController : Initializable {
 
         }
 
-            GlobalScope.launch {
-                SocketObserver.subscribe { message ->
+        GlobalScope.launch {
+            SocketObserver.subscribe { message ->
 
-                    messages.add(message)
+                messages.add(message)
 
-                    println("☕🍵 ??  ${message.message}")
+                println("☕🍵subscribed ??  $message")
 
-                    Platform.runLater(Runnable {
+                Platform.runLater(Runnable {
 
-                        messageHistoryFlowPane.children.add(getMessageLabel(message.message, false))
+                    messageHistoryFlowPane.children.add(getMessageLabel(message.message, false))
 
-                    })
+                })
 
 
-                }
             }
-
+        }
 
 
     }
@@ -118,7 +128,7 @@ class ChatController : Initializable {
 
         var label = Label(message)
 
-        label.prefWidth = 550.0
+        label.prefWidth = 590.0
         label.style = labelStyle
 
 

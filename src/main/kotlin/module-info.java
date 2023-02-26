@@ -9,6 +9,7 @@ module com.example.kchatfx {
     requires kotlinx.coroutines.core.jvm;
     requires io.ktor.http;
     requires io.ktor.websockets;
+    requires com.google.gson;
 
     opens com.example.kchatfx to javafx.fxml;
     exports com.example.kchatfx;
