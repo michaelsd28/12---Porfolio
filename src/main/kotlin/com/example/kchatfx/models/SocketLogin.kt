@@ -5,6 +5,5 @@ data class SocketLogin(
 ) {
     fun toJson(): String {
 return "{\"username\":\"$username\"}"
-
     }
 }
